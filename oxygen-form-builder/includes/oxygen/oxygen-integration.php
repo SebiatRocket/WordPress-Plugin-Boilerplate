@@ -11,4 +11,5 @@ if ( class_exists( 'OxyEl' ) ) {
     require_once 'text-input.php';
     require_once 'email-input.php';
     require_once 'textarea-input.php';
+    require_once 'dropdown-input.php';
 }

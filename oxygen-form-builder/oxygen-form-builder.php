@@ -10,18 +10,18 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           Oxygen_Form_Builder
  *
  * @wordpress-plugin
- * Plugin Name:       WordPress Plugin Boilerplate
- * Plugin URI:        http://example.com/plugin-name-uri/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:       Oxygen Form Builder
+ * Plugin URI:        http://example.com/oxygen-form-builder-uri/
+ * Description:       A custom component plugin for Oxygen Builder that adds form building elements.
  * Version:           1.0.0
- * Author:            Your Name or Your Company
+ * Author:            Your Name
  * Author URI:        http://example.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       plugin-name
+ * Text Domain:       oxygen-form-builder
  * Domain Path:       /languages
  */
 
@@ -39,30 +39,30 @@ define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
+ * This action is documented in includes/class-oxygen-form-builder-activator.php
  */
-function activate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
-	Plugin_Name_Activator::activate();
+function activate_oxygen_form_builder() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-oxygen-form-builder-activator.php';
+	Oxygen_Form_Builder_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
+ * This action is documented in includes/class-oxygen-form-builder-deactivator.php
  */
-function deactivate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+function deactivate_oxygen_form_builder() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-oxygen-form-builder-deactivator.php';
+	Oxygen_Form_Builder_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
+register_activation_hook( __FILE__, 'activate_oxygen_form_builder' );
+register_deactivation_hook( __FILE__, 'deactivate_oxygen_form_builder' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-oxygen-form-builder.php';
 
 /**
  * The Oxygen Builder integration file.
@@ -78,10 +78,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/oxygen/oxygen-integration.php';
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
+function run_oxygen_form_builder() {
 
-	$plugin = new Plugin_Name();
+	$plugin = new Oxygen_Form_Builder();
 	$plugin->run();
 
 }
-run_plugin_name();
+run_oxygen_form_builder();
