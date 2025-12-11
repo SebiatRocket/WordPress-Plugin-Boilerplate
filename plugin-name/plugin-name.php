@@ -65,6 +65,11 @@ register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
 require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
 
 /**
+ * The Oxygen Builder integration file.
+ */
+require plugin_dir_path( __FILE__ ) . 'includes/oxygen/oxygen-integration.php';
+
+/**
  * Begins execution of the plugin.
  *
  * Since everything within the plugin is registered via hooks,
