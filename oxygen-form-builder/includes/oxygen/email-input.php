@@ -15,7 +15,7 @@ class Oxy_Email_Input_Component extends Oxy_Input_Component {
     }
 
     function icon() {
-        return CT_FW_URI . '/toolbar/UI/oxygen-icons/panel/if.svg';
+        return CT_FW_URI . '/toolbar/UI/oxygen-icons/panel/icon.svg';
     }
 
     function render( $options, $defaults, $content ) {

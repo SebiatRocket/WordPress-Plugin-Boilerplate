@@ -46,7 +46,7 @@ class Oxygen_Form_Builder {
 	 * @access   protected
 	 * @var      string    $oxygen_form_builder    The string used to uniquely identify this plugin.
 	 */
-	protected $oxygen_form_builder;
+	protected $plugin_name;
 
 	/**
 	 * The current version of the plugin.
@@ -72,7 +72,7 @@ class Oxygen_Form_Builder {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->oxygen_form_builder = 'oxygen-form-builder';
+		$this->plugin_name = 'oxygen-form-builder';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -152,10 +152,10 @@ class Oxygen_Form_Builder {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Oxygen_Form_Builder_Admin( $this->get_oxygen_form_builder(), $this->get_version() );
+		$plugin_admin = new Oxygen_Form_Builder_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		// $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+		// $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 	}
 
@@ -168,10 +168,10 @@ class Oxygen_Form_Builder {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Oxygen_Form_Builder_Public( $this->get_oxygen_form_builder(), $this->get_version() );
+		$plugin_public = new Oxygen_Form_Builder_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		// $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+		// $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}
 
@@ -191,8 +191,8 @@ class Oxygen_Form_Builder {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_oxygen_form_builder() {
-		return $this->oxygen_form_builder;
+	public function get_plugin_name() {
+		return $this->plugin_name;
 	}
 
 	/**

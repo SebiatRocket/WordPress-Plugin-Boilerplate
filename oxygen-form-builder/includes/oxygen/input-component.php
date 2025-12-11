@@ -6,6 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Oxy_Input_Component extends OxyEl {
 
+    function button_place() {
+        return "form_elements";
+    }
+
     function controls() {
 
         $this->add_control(

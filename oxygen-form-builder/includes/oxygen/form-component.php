@@ -18,6 +18,10 @@ class Oxy_Form_Component extends OxyEl {
         return CT_FW_URI . '/toolbar/UI/oxygen-icons/panel/div.svg';
     }
 
+    function button_place() {
+        return "form_elements";
+    }
+
     function render( $options, $defaults, $content ) {
         $action = isset( $options['action'] ) ? esc_attr( $options['action'] ) : '';
         $method = isset( $options['method'] ) ? esc_attr( $options['method'] ) : 'post';
