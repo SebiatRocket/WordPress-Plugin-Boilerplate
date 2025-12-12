@@ -20,4 +20,14 @@ if ( class_exists( 'OxyEl' ) ) {
     require_once 'email-input.php';
     require_once 'textarea-input.php';
     require_once 'dropdown-input.php';
+
+    // Instantiate components after Oxygen Builder is fully loaded
+    function oxygen_form_builder_init_components() {
+        new Oxy_Form_Component();
+        new Oxy_Text_Input_Component();
+        new Oxy_Email_Input_Component();
+        new Oxy_Textarea_Input_Component();
+        new Oxy_Dropdown_Input_Component();
+    }
+    add_action( 'oxygen_vsb_after_init', 'oxygen_form_builder_init_components' );
 }

@@ -26,5 +26,3 @@ class Oxy_Email_Input_Component extends Oxy_Input_Component {
         echo "<input type='email' name='{$name}' placeholder='{$placeholder}' {$required}>";
     }
 }
-
-new Oxy_Email_Input_Component();

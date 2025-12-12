@@ -26,5 +26,3 @@ class Oxy_Textarea_Input_Component extends Oxy_Input_Component {
         echo "<textarea name='{$name}' placeholder='{$placeholder}' {$required}></textarea>";
     }
 }
-
-new Oxy_Textarea_Input_Component();

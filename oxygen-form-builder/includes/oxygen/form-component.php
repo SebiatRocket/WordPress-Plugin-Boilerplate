@@ -33,7 +33,10 @@ class Oxy_Form_Component extends OxyEl {
     }
 
     function controls() {
-        $this->add_control(
+
+        $form_section = $this->addControlSection( "form_settings", __("Form Settings", "oxygen-form-builder"), "assets/icon.png", $this );
+
+        $form_section->addControl(
             "action",
             array(
                 "label" => __("Action URL", "oxygen-form-builder"),
@@ -41,7 +44,7 @@ class Oxy_Form_Component extends OxyEl {
             )
         );
 
-        $this->add_control(
+        $form_section->addControl(
             "method",
             array(
                 "label" => __("Method", "oxygen-form-builder"),
@@ -59,5 +62,3 @@ class Oxy_Form_Component extends OxyEl {
         return true;
     }
 }
-
-new Oxy_Form_Component();

@@ -29,7 +29,7 @@ class Oxygen_Form_Builder_Public {
 	 * @access   private
 	 * @var      string    $oxygen_form_builder    The ID of this plugin.
 	 */
-	private $oxygen_form_builder;
+	private $plugin_name;
 
 	/**
 	 * The version of this plugin.
@@ -47,9 +47,9 @@ class Oxygen_Form_Builder_Public {
 	 * @param      string    $oxygen_form_builder       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $oxygen_form_builder, $version ) {
+	public function __construct( $plugin_name, $version ) {
 
-		$this->oxygen_form_builder = $oxygen_form_builder;
+		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
 	}
@@ -73,7 +73,7 @@ class Oxygen_Form_Builder_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->oxygen_form_builder, plugin_dir_url( __FILE__ ) . 'css/oxygen-form-builder-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/oxygen-form-builder-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Oxygen_Form_Builder_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->oxygen_form_builder, plugin_dir_url( __FILE__ ) . 'js/oxygen-form-builder-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/oxygen-form-builder-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

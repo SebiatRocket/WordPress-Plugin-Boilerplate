@@ -12,7 +12,9 @@ class Oxy_Input_Component extends OxyEl {
 
     function controls() {
 
-        $this->add_control(
+        $input_section = $this->addControlSection( "input_settings", __("Input Settings", "oxygen-form-builder"), "assets/icon.png", $this );
+
+        $input_section->addControl(
             "name",
             array(
                 "label" => __("Name", "oxygen-form-builder"),
@@ -20,7 +22,7 @@ class Oxy_Input_Component extends OxyEl {
             )
         );
 
-        $this->add_control(
+        $input_section->addControl(
             "placeholder",
             array(
                 "label" => __("Placeholder", "oxygen-form-builder"),
@@ -28,7 +30,7 @@ class Oxy_Input_Component extends OxyEl {
             )
         );
 
-        $this->add_control(
+        $input_section->addControl(
             "required",
             array(
                 "label" => __("Required", "oxygen-form-builder"),

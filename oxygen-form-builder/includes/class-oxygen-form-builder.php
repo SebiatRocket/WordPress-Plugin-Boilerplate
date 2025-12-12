@@ -67,8 +67,8 @@ class Oxygen_Form_Builder {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
-			$this->version = PLUGIN_NAME_VERSION;
+		if ( defined( 'OXYGEN_FORM_BUILDER_VERSION' ) ) {
+			$this->version = OXYGEN_FORM_BUILDER_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}

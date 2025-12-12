@@ -36,12 +36,30 @@ class Oxy_Dropdown_Input_Component extends Oxy_Input_Component {
     }
 
     function controls() {
-        // Add name and required controls
-        parent::controls();
-        // Remove placeholder, not needed for dropdowns
-        $this->remove_control('placeholder');
 
-        $this->add_control(
+        $input_section = $this->addControlSection( "input_settings", __("Input Settings", "oxygen-form-builder"), "assets/icon.png", $this );
+        $input_section->addControl(
+            "name",
+            array(
+                "label" => __("Name", "oxygen-form-builder"),
+                "type" => "textfield",
+            )
+        );
+        $input_section->addControl(
+            "required",
+            array(
+                "label" => __("Required", "oxygen-form-builder"),
+                "type" => "radio",
+                "value" => "no",
+                "options" => array(
+                    "yes" => __("Yes", "oxygen-form-builder"),
+                    "no" => __("No", "oxygen-form-builder")
+                )
+            )
+        );
+
+        $options_section = $this->addControlSection( "options", __("Options", "oxygen-form-builder"), "assets/icon.png", $this );
+        $options_section->addControl(
             "options",
             array(
                 "label"   => __("Options", "oxygen-form-builder"),
@@ -62,5 +80,3 @@ class Oxy_Dropdown_Input_Component extends Oxy_Input_Component {
         );
     }
 }
-
-new Oxy_Dropdown_Input_Component();

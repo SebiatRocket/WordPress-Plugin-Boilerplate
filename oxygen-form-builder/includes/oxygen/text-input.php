@@ -26,5 +26,3 @@ class Oxy_Text_Input_Component extends Oxy_Input_Component {
         echo "<input type='text' name='{$name}' placeholder='{$placeholder}' {$required}>";
     }
 }
-
-new Oxy_Text_Input_Component();
